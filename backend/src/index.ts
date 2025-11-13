@@ -1,10 +1,13 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 import express from 'express';
 import mongoose from 'mongoose';
 // import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
 import userRouter from './router/user.js';
 
-dotenv.config();
+
 
 
 const MONGODB_URI = process.env.MONGO_URI ;

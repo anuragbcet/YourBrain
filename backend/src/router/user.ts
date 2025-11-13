@@ -3,7 +3,8 @@ import {contentModel, linkModel, userModel} from "../db.js";
 import jwt from 'jsonwebtoken'
 import { authMiddleware } from "../middleware/authMiddleware.js";
 import { random } from "../utils.js";
-
+import dotenv from 'dotenv';
+dotenv.config();
 
 if(!process.env.JWT_PASS){
      throw new Error("❌ Missing JWT_PASS in .env");
