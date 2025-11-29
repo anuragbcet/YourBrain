@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
-
 dotenv.config();
+import cors from 'cors'
+
 
 import express from 'express';
 import mongoose from 'mongoose';
@@ -11,6 +12,12 @@ const PORT = process.env.PORT || 4000;
 const MONGODB_URI = process.env.MONGO_URI ;
 const app = express();
 app.use(express.json());
+app.use(cors({
+  origin: "http://localhost:5173", // your frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 
 async function main(){
     try {
@@ -28,8 +35,6 @@ async function main(){
 }
 
 main()
-
-
 
 app.listen(PORT,()=>{
     console.log("server is running on port: 4000");
