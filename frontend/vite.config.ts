@@ -7,4 +7,9 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss()
   ],
+  server: {
+    proxy: {
+      '/api': 'https://yourbrain.onrender.com', // Redirects /api to backend
+    },
+  },
 })
