@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, Zap, Lock, Link2, Search, Code2, Rocket, Moon, Sun, Menu, X } from 'lucide-react';
+import { ChevronRight, Moon, Sun, Menu, X } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Homepage() {
   const [scrollY, setScrollY] = useState(0);
   const [isDark, setIsDark] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -36,20 +38,16 @@ export default function Homepage() {
             <div className="text-3xl font-black bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">🧠</div>
             <span className="text-2xl font-black bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Brain</span>
           </div>
-          
-          {/* Desktop Menu */}
           <div className="hidden md:flex gap-8 items-center">
             <a href="#features" className={`font-medium transition-colors ${isDark ? 'hover:text-indigo-400' : 'hover:text-indigo-600'}`}>Features</a>
             <a href="#tech" className={`font-medium transition-colors ${isDark ? 'hover:text-indigo-400' : 'hover:text-indigo-600'}`}>Tech</a>
             <button onClick={() => setIsDark(!isDark)} className="p-2 rounded-lg bg-gradient-to-r from-indigo-600 to-violet-600 text-white hover:shadow-lg transition-all">
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
-            <button className="px-6 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-semibold hover:shadow-lg transition-all hover:scale-105">
+            <button onClick={()=>navigate('/signup')} className="px-6 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-semibold hover:shadow-lg transition-all hover:scale-105">
               Sign Up
             </button>
           </div>
-
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
             <button onClick={() => setIsDark(!isDark)} className="p-2 rounded-lg bg-gradient-to-r from-indigo-600 to-violet-600 text-white">
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
@@ -59,8 +57,6 @@ export default function Homepage() {
             </button>
           </div>
         </div>
-
-        {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className={`md:hidden border-t ${isDark ? 'border-slate-700 bg-slate-900' : 'border-indigo-100'} p-4 space-y-4`}>
             <a href="#features" className="block py-2">Features</a>
@@ -70,9 +66,9 @@ export default function Homepage() {
         )}
       </nav>
 
-      {/* Hero Section */}
+    
       <section className={`relative min-h-screen flex items-center justify-center pt-20 overflow-hidden ${isDark ? 'bg-slate-950' : 'bg-gradient-to-b from-white via-indigo-50/30 to-white'}`}>
-        {/* Animated Background Elements */}
+        
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute w-96 h-96 bg-gradient-to-r from-indigo-600/20 to-violet-600/20 rounded-full blur-3xl animate-pulse" style={{ top: '-10%', right: '-5%', animation: 'float 6s ease-in-out infinite' }}></div>
           <div className="absolute w-72 h-72 bg-gradient-to-r from-violet-600/20 to-indigo-600/20 rounded-full blur-3xl animate-pulse" style={{ bottom: '-5%', left: '-2%', animation: 'float 8s ease-in-out infinite reverse' }}></div>
@@ -97,7 +93,7 @@ export default function Homepage() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center" style={{ transform: `translateY(${scrollY * 0.5}px)` }}>
           <div className="inline-block mb-6 px-4 py-2 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-300 font-semibold text-sm animate-slide-in-down">
-            ✨ Welcome to Your Digital Memory
+            Welcome to Your Digital Memory
           </div>
 
           <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent leading-tight animate-slide-in-up" style={{ animationDelay: '0.1s' }}>
@@ -110,7 +106,7 @@ export default function Homepage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-in-up" style={{ animationDelay: '0.3s' }}>
             <button className="group relative px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-bold text-lg hover:shadow-2xl transition-all hover:scale-105 overflow-hidden">
-              <span className="relative z-10 flex items-center justify-center gap-2">
+              <span className="relative z-10 flex items-center justify-center gap-2" onClick={()=>navigate('/signin')}>
                 Get Started Free <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -120,7 +116,7 @@ export default function Homepage() {
             </button>
           </div>
 
-          {/* Floating Cards */}
+          
           <div className="mt-16 grid grid-cols-3 gap-4 max-w-2xl mx-auto">
             <div className="p-4 rounded-xl bg-white/50 dark:bg-slate-800/50 backdrop-blur-md border border-white/20 dark:border-slate-700/50 hover:scale-105 transition-transform cursor-pointer">
               <div className="text-2xl mb-2">📹</div>
@@ -138,7 +134,7 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* Features Section */}
+     
       <section id="features" className={`py-20 relative ${isDark ? 'bg-slate-900' : 'bg-white'}`}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
@@ -169,8 +165,6 @@ export default function Homepage() {
           </div>
         </div>
       </section>
-
-      {/* Tech Stack Section */}
       <section id="tech" className={`py-20 ${isDark ? 'bg-slate-950' : 'bg-gradient-to-b from-white to-indigo-50/30'}`}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
@@ -209,8 +203,6 @@ export default function Homepage() {
           </div>
         </div>
       </section>
-
-      {/* Comparison Section */}
       <section className={`py-20 relative overflow-hidden ${isDark ? 'bg-slate-900' : 'bg-white'}`}>
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-black mb-16 text-center bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
@@ -243,7 +235,6 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className={`relative py-24 overflow-hidden`}>
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-violet-600 opacity-90"></div>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
