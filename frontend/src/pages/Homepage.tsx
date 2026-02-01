@@ -35,21 +35,21 @@ export default function Homepage() {
       <nav className={`fixed top-0 w-full backdrop-blur-md z-50 border-b transition-all duration-300 ${isDark ? 'bg-slate-950/80 border-slate-700' : 'bg-white/80 border-indigo-100'}`}>
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <div className="text-3xl font-black bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">🧠</div>
-            <span className="text-2xl font-black bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Brain</span>
+            <div className="text-3xl font-black bg-linear-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">🧠</div>
+            <span className="text-2xl font-black bg-linear-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Brain</span>
           </div>
           <div className="hidden md:flex gap-8 items-center">
             <a href="#features" className={`font-medium transition-colors ${isDark ? 'hover:text-indigo-400' : 'hover:text-indigo-600'}`}>Features</a>
             <a href="#tech" className={`font-medium transition-colors ${isDark ? 'hover:text-indigo-400' : 'hover:text-indigo-600'}`}>Tech</a>
-            <button onClick={() => setIsDark(!isDark)} className="p-2 rounded-lg bg-gradient-to-r from-indigo-600 to-violet-600 text-white hover:shadow-lg transition-all">
+            <button onClick={() => setIsDark(!isDark)} className="p-2 rounded-lg bg-linear-to-r from-indigo-600 to-violet-600 text-white hover:shadow-lg transition-all">
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
-            <button onClick={()=>navigate('/signup')} className="px-6 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-semibold hover:shadow-lg transition-all hover:scale-105">
+            <button onClick={()=>navigate('/signup')} className="px-6 py-2 rounded-full bg-linear-to-r from-indigo-600 to-violet-600 text-white font-semibold hover:shadow-lg transition-all hover:scale-105">
               Sign Up
             </button>
           </div>
           <div className="md:hidden flex items-center gap-2">
-            <button onClick={() => setIsDark(!isDark)} className="p-2 rounded-lg bg-gradient-to-r from-indigo-600 to-violet-600 text-white">
+            <button onClick={() => setIsDark(!isDark)} className="p-2 rounded-lg bg-linear-to-r from-indigo-600 to-violet-600 text-white">
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
             <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2">
@@ -61,17 +61,17 @@ export default function Homepage() {
           <div className={`md:hidden border-t ${isDark ? 'border-slate-700 bg-slate-900' : 'border-indigo-100'} p-4 space-y-4`}>
             <a href="#features" className="block py-2">Features</a>
             <a href="#tech" className="block py-2">Tech</a>
-            <button className="w-full px-6 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-semibold">Sign Up</button>
+            <button className="w-full px-6 py-2 rounded-full bg-linear-to-r from-indigo-600 to-violet-600 text-white font-semibold">Sign Up</button>
           </div>
         )}
       </nav>
 
     
-      <section className={`relative min-h-screen flex items-center justify-center pt-20 overflow-hidden ${isDark ? 'bg-slate-950' : 'bg-gradient-to-b from-white via-indigo-50/30 to-white'}`}>
+      <section className={`relative min-h-screen flex items-center justify-center pt-20 overflow-hidden ${isDark ? 'bg-slate-950' : 'bg-linear-to-b from-white via-indigo-50/30 to-white'}`}>
         
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute w-96 h-96 bg-gradient-to-r from-indigo-600/20 to-violet-600/20 rounded-full blur-3xl animate-pulse" style={{ top: '-10%', right: '-5%', animation: 'float 6s ease-in-out infinite' }}></div>
-          <div className="absolute w-72 h-72 bg-gradient-to-r from-violet-600/20 to-indigo-600/20 rounded-full blur-3xl animate-pulse" style={{ bottom: '-5%', left: '-2%', animation: 'float 8s ease-in-out infinite reverse' }}></div>
+          <div className="absolute w-96 h-96 bg-linear-to-r from-indigo-600/20 to-violet-600/20 rounded-full blur-3xl animate-pulse" style={{ top: '-10%', right: '-5%', animation: 'float 6s ease-in-out infinite' }}></div>
+          <div className="absolute w-72 h-72 bg-linear-to-r from-violet-600/20 to-indigo-600/20 rounded-full blur-3xl animate-pulse" style={{ bottom: '-5%', left: '-2%', animation: 'float 8s ease-in-out infinite reverse' }}></div>
         </div>
 
         <style>{`
@@ -96,7 +96,7 @@ export default function Homepage() {
             Welcome to Your Digital Memory
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent leading-tight animate-slide-in-up" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-5xl md:text-7xl font-black mb-6 bg-linear-to-r from-indigo-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent leading-tight animate-slide-in-up" style={{ animationDelay: '0.1s' }}>
             Remember Everything
           </h1>
 
@@ -105,11 +105,11 @@ export default function Homepage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-in-up" style={{ animationDelay: '0.3s' }}>
-            <button className="group relative px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-bold text-lg hover:shadow-2xl transition-all hover:scale-105 overflow-hidden">
+            <button className="group relative px-8 py-4 rounded-full bg-linear-to-r from-indigo-600 to-violet-600 text-white font-bold text-lg hover:shadow-2xl transition-all hover:scale-105 overflow-hidden">
               <span className="relative z-10 flex items-center justify-center gap-2" onClick={()=>navigate('/signin')}>
                 Get Started Free <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="absolute inset-0 bg-linear-to-r from-violet-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </button>
             <button className={`px-8 py-4 rounded-full font-bold text-lg border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-900 transition-all hover:scale-105 ${isDark ? 'dark:border-indigo-400 dark:text-indigo-400' : ''}`}>
               Watch Demo
@@ -138,7 +138,7 @@ export default function Homepage() {
       <section id="features" className={`py-20 relative ${isDark ? 'bg-slate-900' : 'bg-white'}`}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-black mb-4 bg-linear-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
               Why Choose Your Brain?
             </h2>
             <p className={`text-xl ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
@@ -153,7 +153,7 @@ export default function Homepage() {
                 className={`group p-8 rounded-2xl border transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer backdrop-blur-sm ${
                   isDark
                     ? 'bg-slate-800/50 border-slate-700 hover:border-indigo-500/50 hover:bg-slate-800'
-                    : 'bg-gradient-to-br from-white to-indigo-50/50 border-indigo-200 hover:border-indigo-400 hover:bg-indigo-50'
+                    : 'bg-linear-to-br from-white to-indigo-50/50 border-indigo-200 hover:border-indigo-400 hover:bg-indigo-50'
                 }`}
                 style={{ animation: `slideInUp 0.5s ease-out forwards`, animationDelay: `${idx * 0.1}s`, opacity: 0 }}
               >
@@ -165,10 +165,10 @@ export default function Homepage() {
           </div>
         </div>
       </section>
-      <section id="tech" className={`py-20 ${isDark ? 'bg-slate-950' : 'bg-gradient-to-b from-white to-indigo-50/30'}`}>
+      <section id="tech" className={`py-20 ${isDark ? 'bg-slate-950' : 'bg-linear-to-b from-white to-indigo-50/30'}`}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-black mb-4 bg-linear-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
               Built with Modern Technology
             </h2>
             <p className={`text-xl ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
@@ -187,7 +187,7 @@ export default function Homepage() {
                 } group`}
                 style={{ animation: `slideInUp 0.5s ease-out forwards`, animationDelay: `${idx * 0.15}s`, opacity: 0 }}
               >
-                <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform origin-left">
+                <h3 className="text-2xl font-bold mb-6 bg-linear-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform origin-left">
                   {tech.category}
                 </h3>
                 <div className="space-y-3">
@@ -205,12 +205,12 @@ export default function Homepage() {
       </section>
       <section className={`py-20 relative overflow-hidden ${isDark ? 'bg-slate-900' : 'bg-white'}`}>
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black mb-16 text-center bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-black mb-16 text-center bg-linear-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
             The Difference is in the Details
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-red-50 to-red-100 dark:from-slate-800 dark:to-slate-900 border border-red-200 dark:border-slate-700">
+            <div className="p-8 rounded-2xl bg-linear-to-br from-red-50 to-red-100 dark:from-slate-800 dark:to-slate-900 border border-red-200 dark:border-slate-700">
               <h3 className="text-2xl font-bold mb-6 text-red-900 dark:text-red-400">❌ Old Way</h3>
               <ul className="space-y-3 text-red-800 dark:text-slate-300">
                 <li>✗ Browser bookmarks scattered everywhere</li>
@@ -221,7 +221,7 @@ export default function Homepage() {
               </ul>
             </div>
 
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-slate-800 dark:to-slate-900 border border-emerald-200 dark:border-slate-700">
+            <div className="p-8 rounded-2xl bg-linear-to-br from-emerald-50 to-emerald-100 dark:from-slate-800 dark:to-slate-900 border border-emerald-200 dark:border-slate-700">
               <h3 className="text-2xl font-bold mb-6 text-emerald-900 dark:text-emerald-400">✅ Your Brain Way</h3>
               <ul className="space-y-3 text-emerald-800 dark:text-slate-300">
                 <li>✓ Everything in one intelligent place</li>
@@ -236,7 +236,7 @@ export default function Homepage() {
       </section>
 
       <section className={`relative py-24 overflow-hidden`}>
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-violet-600 opacity-90"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-indigo-600 to-violet-600 opacity-90"></div>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse" style={{ top: '-10%', right: '-5%' }}></div>
           <div className="absolute w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse" style={{ bottom: '-10%', left: '-5%' }}></div>
