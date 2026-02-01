@@ -7,7 +7,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 if(!process.env.JWT_PASS){
-     throw new Error("❌ Missing JWT_PASS in .env");
+     throw new Error("Missing JWT_PASS in .env");
 }
 
 const JWT_SECRET =process.env.JWT_PASS ;
